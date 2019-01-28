@@ -80,9 +80,9 @@ class Navbar extends Component {
         </div>
       <div id="mySidenav" className="sidenav">
         <button className="closebtn" onClick={this.closeNav}>&times;</button>
-        <a href="/">HOME</a>
-        <a href="/archives">lb. HISTORY</a>
-        <a href="/contact">CONTACT</a>
+        <a href="/"><i className="fas fa-home" aria-hidden="true"></i> HOME</a>
+        <a href="/archives"><i className="fas fa-weight"></i>  HISTORY</a>
+        <a href="/contact"><i class="fas fa-microphone-alt"></i> CONTACT</a>
   </div>
   </div>
   </nav>

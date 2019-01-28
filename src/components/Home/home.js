@@ -9,7 +9,7 @@ class Home extends Component {
         <div className="card">
         <div className="card-body">
         <form className="weight">
-          Today's Weight:<br/>
+          <h4>Today's Weight:</h4>
           <input className="todayWeight" align="middle" id="todayWeight"/><br/><br/>
           <button type="button" className="btn btn-outline-secondary">Submit</button>
         </form>

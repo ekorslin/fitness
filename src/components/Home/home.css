@@ -20,10 +20,14 @@ body {
     border: 1px solid black;
 }
 
+h4 {
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
     .btn {
         font-size: 30px;
         padding: 0px 0px 0px 0px;
     }
-}
+} */
