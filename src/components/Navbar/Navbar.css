@@ -50,13 +50,13 @@ li {
     width: 0;
     position: fixed;
     z-index: 1;
-    opacity: .8;
+    opacity: .85;
     top: 0;
     left: 0;
-    background-color: goldenrod;
+    background-color: black;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding-top: 70px;
   }
   
   .sidenav a {
@@ -64,7 +64,7 @@ li {
     text-decoration: none;
     font-size: 22px;
     font-family: 'Montserrat', sans-serif;
-    color: black;
+    color: white;
     /* text-shadow: 1px 1px 2px white; */
     display: block;
     transition: 0.3s;
