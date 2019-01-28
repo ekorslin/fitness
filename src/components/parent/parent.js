@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "../Home";
-import Archives from "../Archives";
+import bodyChoice from "../bodyChoice";
 import "./parent.css";
 
 class Parent extends Component {
@@ -52,7 +52,7 @@ class Parent extends Component {
     return (
       <div>
             <Route exact path="/" component={Home} />
-            <Route exact path="/archives" component={Archives} />
+            <Route exact path="/bodyChoice" component={bodyChoice} />
       </div>
     );
   }

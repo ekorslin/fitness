@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import './home.css';
 
 class Home extends Component {
+
+  onClick = (event) => {
+    var lbs = this.refs.weight.value;
+    alert("Today, you weigh in at " + lbs + " lbs.");
+    this.props.history.push("/bodyChoice")
+  };
+
   render() {
     return (
       <div><br/>
@@ -10,8 +17,8 @@ class Home extends Component {
         <div className="card-body">
         <form className="weight">
           <h4>Today's Weight:</h4>
-          <input className="todayWeight" align="middle" id="todayWeight"/><br/><br/>
-          <button type="button" className="btn btn-outline-secondary">Submit</button>
+          <input className="todayWeight" type="number" align="middle" ref="weight" id="todayWeight"/><br/><br/>
+          <button type="button" className="btn btn-outline-secondary" onClick={this.onClick.bind(this)}>Submit</button>
         </form>
       </div>
       </div><br/>
