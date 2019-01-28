@@ -1,0 +1,29 @@
+.btn {
+    border-radius: 1; 
+}
+
+.weight {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+.card {
+    margin: 0 auto;
+    width: 90%;
+    box-shadow: 0 5px 20px 5 black;
+    border-radius: 0px;
+    border: 2px solid black;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (max-width: 600px) {
+    .btn {
+        font-size: 30px;
+        padding: 0px 0px 0px 0px;
+    }
+}

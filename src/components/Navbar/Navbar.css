@@ -1,0 +1,135 @@
+nav.navbar.navbar-default {
+  margin-bottom: 0;
+  background-color: white;
+}
+
+.navbar-brand {
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: white;
+  text-shadow: 0px 0px 2px black, 0 0 25px goldenrod, 0 0 5px black;
+  font-style: bold;
+  font-size: 20px;
+}
+
+#squat {
+  height: 100%;
+  width: 18%;
+}
+
+.navbar-custom {
+  background-color: white;
+  box-shadow: 0 0px 20px 0 black;
+  border-bottom: 1px
+   solid black;
+}
+
+li {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  padding-left: 17px;
+  padding-right: 17px;
+  text-shadow: 1px 1px 2px black, 0 0 25px goldenrod, 0 0 5px black;
+  }
+
+  li:hover {
+      border-bottom: 1px solid whitesmoke;
+      padding-left: 17px;
+  }
+
+  ul {
+    padding-left: -100px;
+  }
+
+  #toggle {
+    width: 10%;
+    cursor: pointer;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    opacity: .8;
+    top: 0;
+    left: 0;
+    background-color: goldenrod;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    /* text-shadow: 1px 1px 2px white; */
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidenav a:hover {
+    font-weight: bold;
+  }
+
+  .sidenav .closebtn:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  @media (min-width: 1000px) {
+
+      .nav-wide {
+        display: flex;
+      }
+  
+      .sidenav-div {
+        display: none;
+      }
+    }
+  
+
+  @media (max-width: 1000px) {
+
+    .nav-wide {
+      display: none;
+    }
+
+    h5 {
+      font-size: 65px;
+    }
+
+    .btn {
+      font-size: 12px;
+    }
+
+   .sidenav-div {
+      display: block;
+    }
+  }
+
+  @media (max-width: 767px) {
+
+    h5 {
+      font-size: 40px;
+    }
+
+    .btn {
+      font-size: 5px;
+    }
+  }
