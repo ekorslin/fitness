@@ -18,9 +18,10 @@ class bodyChoice extends Component {
         <h4>Today's Workout:</h4>
     <select className="custom-select" id="choice" name="bodyChoice">
       <option value="arms">Biceps & Triceps</option>
-      <option value="cardio">Cardio</option>
-      <option value="legs">Legs</option>
+      <option value="cardio">Cardio I</option>
       <option value="chest">Chest & Back</option>
+      <option value="cardio">Cardio II</option>
+      <option value="legs">Legs</option>
     </select><br/>
     <button type="button" className="btn btn-outline-dark" onClick={this.onClick.bind(this)}>SUBMIT</button>
     </form><br/>

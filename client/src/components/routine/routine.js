@@ -22,13 +22,30 @@ import './routine.css';
       super();
    
       this.state = {
-        modalIsOpen: false
+        modalIsOpen: false,
+        data: []
       };
    
       this.openModal = this.openModal.bind(this);
       this.afterOpenModal = this.afterOpenModal.bind(this);
       this.closeModal = this.closeModal.bind(this);
     }
+
+
+    componentDidMount() {
+      var bodyGroup = this.props.part;
+      console.log(bodyGroup);
+      axios.post('/pullWorkouts', {
+        bodyGroup: bodyGroup
+      })
+      .then(function (response) {
+        console.log(response.data);
+            this.setState({
+                data: response.data, loading: false
+            })}.bind(this))
+    .catch(function (error) {
+        console.log(error);
+    })};
    
     openModal() {
       this.setState({modalIsOpen: true});
@@ -64,12 +81,22 @@ import './routine.css';
       .catch(function (error) {
         console.log(error);
       });
-    };
+    };  
    
     render() {
       return (
         <div>
-          <button id="new" className="btn btn-outline-dark" onClick={this.openModal}>ADD NEW EXERCISE</button>
+          <button id="new" className="btn btn-outline-dark" onClick={this.openModal}>ADD NEW EXERCISE</button><br/>
+          <div className="card"><br/>
+          <h7>Welcome to {this.props.part} Day!  Let's hit it hard.  Here's the exercises you completed on your last {this.props.part} day.</h7><br/></div><br/>
+          {this.state.data.map((data, index) => (
+            <div className="card"><br/>
+              {/* <h7>{data.createdAt}</h7> */}
+              <h4>{data.description}</h4>
+              <h8>Weight:  {data.weight} lb's.</h8>
+              <h8>{data.sets} Sets of {data.reps}</h8><br/>
+            </div>
+          ))};
           <Modal
             isOpen={this.state.modalIsOpen}
             onAfterOpen={this.afterOpenModal}
@@ -98,6 +125,6 @@ import './routine.css';
         </div>
       );
     }
-  }
+      }
 
 export default routine;

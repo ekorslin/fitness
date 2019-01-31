@@ -74,3 +74,8 @@
     font-style: bold;
     float: left;
   }
+
+  h7, h8 {
+    font-family: 'PT Sans Narrow', sans-serif;
+    text-align: center;
+  }

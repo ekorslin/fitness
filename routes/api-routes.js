@@ -33,6 +33,15 @@ module.exports = function(app) {
     });
   });
 
+  app.post("/pullWorkouts", function(req, res) {
+    console.log(req.body);
+    // This is our sequelize query in which we pull the dates from the database that match the dates that the admin entered
+    db.exercise.findAll({where: { bodyGroup: req.body.bodyGroup}}).then(function(response) {
+      // Sending a JSON response composed of a stringified version of the specified data from dbTeeTime
+      res.json(response);
+    });
+  });
+
   // Route for logging user out of their session
   app.post("/logout", function(req, res) {
     req.logout();
@@ -41,7 +50,7 @@ module.exports = function(app) {
   });
 
   // Route for getting some data about our user to be used client side
-  app.get("/api/user_data", function(req, res) {
+  app.get("/pullWorkouts", function(req, res) {
     if (!req.user) {
       // The user is not logged in, send back an empty object
       res.json({});

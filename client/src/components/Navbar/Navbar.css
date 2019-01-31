@@ -19,8 +19,7 @@ nav.navbar.navbar-default {
 .navbar-custom {
   background-color: white;
   box-shadow: 0 0px 20px 0 black;
-  border-bottom: 1px
-   solid black;
+  border-bottom: 1px solid black;
 }
 
 li {
