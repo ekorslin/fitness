@@ -1,7 +1,7 @@
 .custom-select {
     position: relative;
     font-family: Arial;
-    width: 60%;
+    width: 90%;
     margin: 0 auto;
     display: block;
     text-align: center;
@@ -12,7 +12,7 @@
   }
   
   .select-selected {
-    background-color: DodgerBlue;
+    background-color: black;
   }
   
   /* Style the arrow inside the select element: */

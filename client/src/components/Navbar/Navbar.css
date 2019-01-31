@@ -108,28 +108,10 @@ li {
 
     .nav-wide {
       display: none;
-    }
+      }
 
-    h5 {
-      font-size: 65px;
-    }
-
-    .btn {
-      font-size: 12px;
-    }
 
    .sidenav-div {
       display: block;
-    }
-  }
-
-  @media (max-width: 767px) {
-
-    h5 {
-      font-size: 40px;
-    }
-
-    .btn {
-      font-size: 5px;
     }
   }

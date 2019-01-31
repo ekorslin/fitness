@@ -10,8 +10,17 @@ CREATE TABLE IF NOT EXISTS weights (
 	PRIMARY KEY (id)
 );
 
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
- 
+CREATE TABLE IF NOT EXISTS exercises (
+    id INT AUTO_INCREMENT,
+    createdAt DATETIME,
+    updatedAt DATETIME,
+    description VARCHAR(255) NOT NULL,
+    bodyGroup VARCHAR(255) NOT NULL,
+    weight INT,
+    sets INT,
+    reps INT,
+	PRIMARY KEY (id)
+);
 
-USE fitness_db;
-SELECT * FROM weights;
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';

@@ -10,7 +10,7 @@ class Home extends Component {
       weight: lbs
     }).then(function(res) {
       alert("Today, you weigh in at " + lbs + " lbs.");
-      window.location.href="/bodyChoice";
+      window.location.href="/workout";
     })
     .catch(function (error) {
       console.log(error);
@@ -26,7 +26,7 @@ class Home extends Component {
         <form className="weight">
           <h4>Today's Weight:</h4>
           <input className="todayWeight" type="number" align="middle" ref="weight" id="todayWeight"/><br/><br/>
-          <button type="button" className="btn btn-outline-secondary" onClick={this.onClick.bind(this)}>Submit</button>
+          <button type="button" className="btn btn-outline-dark" onClick={this.onClick.bind(this)}>SUBMIT</button>
         </form>
       </div>
       </div><br/>

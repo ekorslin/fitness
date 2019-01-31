@@ -6,7 +6,8 @@ class bodyChoice extends Component {
   onClick = (event) => {
     var parts = document.getElementById("choice").value;
     alert("Today, you are planning to work out the " + parts);
-    this.props.history.push("/workout")
+    this.props.click(parts);
+    this.props.history.push("/routine")
   };
 
   render() {
@@ -21,8 +22,8 @@ class bodyChoice extends Component {
       <option value="legs">Legs</option>
       <option value="chest">Chest & Back</option>
     </select><br/>
-    <button type="button" className="btn btn-outline-secondary" onClick={this.onClick.bind(this)}>Submit</button>
-    </form>
+    <button type="button" className="btn btn-outline-dark" onClick={this.onClick.bind(this)}>SUBMIT</button>
+    </form><br/>
     </div>
     </div>
     );

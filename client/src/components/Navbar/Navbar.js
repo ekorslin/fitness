@@ -81,6 +81,7 @@ class Navbar extends Component {
       <div id="mySidenav" className="sidenav">
         <button className="closebtn" onClick={this.closeNav}>&times;</button>
         <a href="/"><i className="fas fa-home" aria-hidden="true"></i> HOME</a>
+        <a href="/workout"><i className="fas fa-dumbbell"></i>  WORKOUTS</a>
         <a href="/archives"><i className="fas fa-weight"></i>  HISTORY</a>
         <a href="/contact"><i className="fas fa-microphone-alt"></i> CONTACT</a>
   </div>

@@ -10,7 +10,23 @@ module.exports = function(app) {
     db.weights.create({
       weight: req.body.weight,
     }).then(function() {
-        // this.history.push("/bodyChoice");
+        this.history.push("/bodyChoice");
+    }).catch(function(err) {
+      console.log(err);
+      res.json(err);
+    });
+  });
+
+  app.post("/newExercise", function(req, res) {
+    console.log(req.body);
+    db.exercise.create({
+      description: req.body.description,
+      bodyGroup: req.body.bodyGroup,
+      weight: req.body.weight,
+      sets: req.body.sets,
+      reps: req.body.reps
+    }).then(function() {
+        this.history.push("/");
     }).catch(function(err) {
       console.log(err);
       res.json(err);

@@ -1,0 +1,76 @@
+  .card {
+    margin: 0 auto;
+    width: 90%;
+    box-shadow: 0 5px 20px 5 black;
+    border-radius: 0px;
+    border: 1px solid black;
+  }
+
+  .labels {
+    font-family: 'PT Sans Narrow', sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    font-style: bold;
+  }
+
+  .btn {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    width: 90%;
+    height: 30px;
+    border-radius: 0px;
+  }
+
+  #newExercise {
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+  }
+
+  #reps {
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+  }
+
+  h2 {
+    font-family: 'PT Sans Narrow', sans-serif; 
+    color: black;
+  }
+
+  #new {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    font-style: bold;
+  }
+
+  #weight {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    font-style: bold;
+    width: 80px;
+  }
+
+  #sets {
+    width: 55px;
+    float: left;
+  }
+
+
+  #reps {
+    width: 55px;
+    float: left;
+  }
+
+  .labelsTwo {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-style: bold;
+    float: left;
+  }

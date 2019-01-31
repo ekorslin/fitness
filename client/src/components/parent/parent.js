@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "../Home";
-import bodyChoice from "../bodyChoice";
-import workout from "../workout";
+import BodyChoice from "../bodyChoice";
+import Routine from "../routine";
 import "./parent.css";
 
 class Parent extends Component {
@@ -12,39 +12,20 @@ class Parent extends Component {
     super(props);
     // Setting the state for this component with empty date, time, email, and password keys.
   this.state = {
-    date: "",
-    time: "",
-    email: "",
-    password: ""
+    bodyChoice: "",
   };
 }
-
-// Function setting state of the email key.
-  login(credentials) {
-    this.setState({
-      email: credentials
-    })
-  };
-
   // Function setting the state of the date key.
-  onUpdate(dateChosen) {
+  onUpdate(parts) {
     this.setState({
-      date: dateChosen
+      bodyChoice: parts
     });
   };
 
-  // Function setting the state of the time key.
-  onTimeUpdate(time) {
-    this.setState({
-      time: time
-    })
-  };
 
   // Function ensuring that the component mounts with the updated state key value pairs.
   componentDidUpdate() {
-    console.log(this.state.date);
-    console.log(this.state.time);
-    console.log(this.state.email)
+    console.log(this.state.bodyChoice);
   };
 
 
@@ -53,8 +34,10 @@ class Parent extends Component {
     return (
       <div>
             <Route exact path="/" component={Home} />
-            <Route exact path="/bodyChoice" component={bodyChoice} />
-            <Route exact path="/workout" component={workout} />
+            <Route exact path="/workout" render={(props) => <BodyChoice {...props} click={this.onUpdate.bind(this)} />} />
+            {/* <Route exact path="/bodyChoice" component={bodyChoice} /> */}
+            <Route exact path="/routine" render={(props) => <Routine {...props} part={this.state.bodyChoice} />} />
+            {/* <Route exact path="/routine" component={routine} /> */}
       </div>
     );
   }
