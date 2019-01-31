@@ -10,14 +10,13 @@ const db = require("./models");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-// if (process.env.JAWSDB_URL) {
-//   connection = mysql.createConnection(process.env.JAWSDB_URL);
-//     host: 'localhost',
-//     user: 'root',
-//     password: 'password',
-//     database: 'beaverCreekdb'
-//   });
-// };
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+    host: 'localhost';
+    user: 'root';
+    password: 'password';
+    database: 'fitness_db'
+  };
 
 // Defining middleware
 app.use(bodyParser.urlencoded({ extended: true }));
