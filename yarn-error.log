@@ -1,11 +1,11 @@
 Arguments: 
-  /usr/local/Cellar/node/10.1.0/bin/node /usr/local/bin/yarn add mysql-sequelize-heroku
+  /usr/local/Cellar/node/10.1.0/bin/node /usr/local/bin/yarn start
 
 PATH: 
   /Library/Frameworks/Python.framework/Versions/3.6/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/ekorslin/Library/Python/3.6/bin
 
 Yarn version: 
-  1.10.1
+  1.12.1
 
 Node version: 
   10.1.0
@@ -14,22 +14,24 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/mysql-sequelize-heroku: Not found
-      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:61073:18)
-      at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:120166:22)
-      at Request.emit (events.js:182:13)
-      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:121138:10)
-      at Request.emit (events.js:182:13)
-      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:121060:12)
-      at Object.onceWrapper (events.js:273:13)
-      at IncomingMessage.emit (events.js:187:15)
-      at endReadableNT (_stream_readable.js:1086:12)
-      at process._tickCallback (internal/process/next_tick.js:63:19)
+  SyntaxError: /Users/ekorslin/Desktop/fitness/package.json: Unexpected token / in JSON at position 1022
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1166:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:92:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:103:13
+      at run (/usr/local/lib/node_modules/yarn/lib/cli.js:95504:22)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:95521:30
+      at flush (/usr/local/lib/node_modules/yarn/lib/cli.js:95005:9)
+      at process._tickCallback (internal/process/next_tick.js:61:11)
 
 npm manifest: 
   {
     "name": "mern",
     "version": "1.0.0",
+    "engines": {
+      "node": "10.1.0"
+    },
     "description": "Mern Demo",
     "main": "server.js",
     "scripts": {
@@ -58,7 +60,7 @@ npm manifest:
       "dotenv": "^6.1.0",
       "express": "^4.16.4",
       "express-session": "^1.15.6",
-      "if-env": "^1.0.4",
+      // "if-env": "^1.0.4",
       "jsonwebtoken": "^8.3.0",
       "moment": "^2.22.2",
       "mysql2": "^1.6.1",
