@@ -4,6 +4,7 @@ const session = require("express-session");
 // Requiring our passport configuration for authentication
 const path = require("path");
 const bodyParser = require("body-parser");
+const mysql = require("mysql");
 // Requiring our models for syncing
 const db = require("./models");
 
